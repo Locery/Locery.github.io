@@ -801,6 +801,8 @@ require(['jquery'], function ($) {
 		}, 1);
 	}
 	//知乎热榜原网址：https://quark.sm.cn/s?q=热搜&tab=zhihu&uc_param_str=dnntnwvepffrbijbprsvchgputdemennosstodcaaagidsdieini&from=resou1022
+	//NBA图片：https://image.uc.cn/s/uae/g/3o/broccoli/resource/201912/6abef9b0-1837-11ea-ae2f-d1f91872b195.png
+	//今日热点：https://gw.alicdn.com/imgextra/i4/O1CN01nNLX4022kPmxJAbLA_!!6000000007158-2-tps-447-72.png
 	//精选页面
 	function choice() {
 		// 构建HTML
@@ -811,7 +813,7 @@ require(['jquery'], function ($) {
 			<div class="list h2"><a class="flex-1 content weather" href="https://quark.sm.cn/s?q=天气"><div>访问中</div><div></div><div></div></a><a class="flex-right content trivia" style="background-image:linear-gradient(148deg, rgb(0, 188, 150) 2%, rgb(129, 239, 201) 98%)"><div class="hl back-hl">今日冷知识</div><div class="shl" style="text-align: center;left: 15px;right: 15px;font-size: 12px;"></div><div class="cmp-icon" style="right: 20px; bottom: 0px; width: 62px; height: 54px; background-image: url(https://gw.alicdn.com/L1/723/1578466791/b3/f4/94/b3f494c724631d436989a4b7569952df.png);"></div></a></div>
 			<div class="list h3">
 				<div class="flex-left">
-					<div class="list cmp-flex"><a href="https://quark.sm.cn/s?q=NBA&uc_param_str=dnntnwvepffrbijbprsvchgputdemennosstodcaaagidsdieini&from=resou1022"><div class="content" style="background-image:linear-gradient(-36deg, rgb(0, 88, 178) 0%, rgb(102, 158, 214) 99%)"><div class="hl">NBA</div><div class="cmp-icon" style="left: 60px; top: 28px; width: 34px; height: 61px; background-image: url(https://image.uc.cn/s/uae/g/3o/broccoli/resource/201912/6abef9b0-1837-11ea-ae2f-d1f91872b195.png);"></div></div></a></div>
+					<div class="list cmp-flex"><a href="https://act.quark.cn/apps/qknewshours/routes/hot_news?uc_param_str=dnfrpfbivesscpgimibtbmnijblauputogpintnwktprchmt&uc_biz_str=OPT:BACK_BTN_STYLE@0|OPT:TOOLBAR_STYLE@0|OPT:W_PAGE_REFRESH@0|OPT:SAREA@0|OPT:IMMERSIVE@1|OPT:W_ENTER_ANI@1|OPT:HANDLE_BACK_EVENT@1|OPT:qk_long_clk@0"><div class="content" style="background-image:linear-gradient(-36deg, rgb(0, 88, 178) 0%, rgb(102, 158, 214) 99%)"><div class="hl">今日热点</div><div class="cmp-icon" style="left: 3px; top: 38px; width: 90px; height: 45px; background-image: url(icon/jrrd.png);"></div></div></a></div>
 					<div class="list cmp-flex"><a href="https://broccoli.uc.cn/apps/pneumonia/routes/index"><div class="content" style="background-image:linear-gradient(136deg, rgb(97, 71, 183) 0%, rgb(132, 113, 196) 100%)"><div style="left:10px" class="hl">新肺炎动态</div><div class="cmp-icon" style="bottom: 0px; width: 47px; height: 45px; background-image: url(https://gw.alicdn.com/L1/723/1579592073/31/78/ef/3178efce546d72e6f0772755ff1020cb.png);"></div></div></a></div>
 				</div>
 				<a class="flex-1 content" href="https://quark.sm.cn/s?q=%E6%96%B0%E9%97%BB%E6%A6%9C&uc_param_str=dnntnwvepffrbijbprsvchgputdemennosstodcaaagidsdieini&from=resou1022" style="background-image:linear-gradient(135deg, rgb(34, 34, 80) 1%, rgb(60, 60, 89) 100%)"><div class="hl relative">热搜榜</div><div class="news-list"></div></a>
