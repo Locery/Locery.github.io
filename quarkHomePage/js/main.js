@@ -204,6 +204,7 @@ require(['jquery'], function ($) {
 	 * @function del 删除书签
 	 * @function add 添加书签
 	 * "name": "导航", "url": "https://www.pp93.com/m", "icon": "icon/pp93.png"
+	 * "name": "微博", "url": "https://weibo.com", "icon": "icon/weibo.png"
 	 */
 	var bookMarkFn = function (ele, options) {
 		this.$ele = $(ele);
@@ -212,12 +213,12 @@ require(['jquery'], function ($) {
 				   { "name": "捷径", "url": "https://broccoli.uc.cn/apps/iiryABZFS/routes/BBkPRMpHY?offline=true&uc_param_str=dnntnwvepffrgibijbprsvdsdichmenn&uc_biz_str=OPT:NIGHT_MODE_MASK@0|OPT:BACK_BTN_STYLE@0", "icon": "icon/jiejing.jpg" },
 				   { "name": "夸克日报", "url": "https://news.quark.cn/dailynews/v2/home?entry=navi&webCompass=true&uc_param_str=dnfrpfbivessbtbmnilauputogpintnwmtsvcppcprsnnnchmicc&uc_biz_str=OPT%3ABACK_BTN_STYLE%400%7Cqk_enable_gesture%3Afalse%7COPT%3ATOOLBAR_STYLE%400%7COPT%3AW_PAGE_REFRESH%400%7COPT%3Aqk_long_clk%400%7COPT%3AW_ENTER_ANI%401%7COPT%3AW_EXIT_ANI%401%7COPT%3AIMMERSIVE%401", "icon": "icon/ribao.jpg" },
 				   { "name": "热搜", "url": "https://broccoli.uc.cn/apps/quark_hot_search/routes/index?uc_param_str=dsdnfrpfbivesscpgimibtbmnijblauputogpintnwktprchmt&uc_biz_str=OPT%3AW_ENTER_ANI%401%7COPT%3ATOOLBAR_STYLE%400%7COPT%3AW_PAGE_REFRESH%400%7COPT%3ABACK_BTN_STYLE%400%7COPT%3ASAREA%400%7COPT%3AIMMERSIVE%401&webCompass=true&entryrtne=quark_sc&tabidx=0", "icon": "icon/quark.jpg" },
-				   { "name": "微博", "url": "https://weibo.com", "icon": "icon/weibo.png" }, 
 				   { "name": "知乎", "url": "https://zhihu.com", "icon": "icon/zhihu.png" },
 				   { "name": "IT之家", "url": "https://m.ithome.com", "icon": "icon/ithome.png" }, 
 				   { "name": "联合早报", "url": "https://www.zaobao.com", "icon": "icon/lianhezaobao.png" }, 
-				   { "name": "财联社", "url": "https://www.cls.cn/", "icon": "icon/cailianshe.png" }, 
-				   { "name": "金十数据", "url": "https://www.jin10.com/", "icon": "icon/jinshishuju.png" }],
+				   { "name": "财联社", "url": "https://m.cls.cn/", "icon": "icon/cailianshe.png" }, 
+				   { "name": "金十数据", "url": "https://www.jin10.com/", "icon": "icon/jinshishuju.png" },
+				   { "name": "新浪财经", "url": "https://finance.sina.cn", "icon": "icon/xinlangcaijing.png" }],
 		};
 		this.options = $.extend({}, this.options, options);
 		this.init();
