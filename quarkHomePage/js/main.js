@@ -203,11 +203,21 @@ require(['jquery'], function ($) {
 	 * @function bind 绑定事件
 	 * @function del 删除书签
 	 * @function add 添加书签
+	 * "name": "导航", "url": "https://www.pp93.com/m", "icon": "icon/pp93.png"
 	 */
 	var bookMarkFn = function (ele, options) {
 		this.$ele = $(ele);
 		this.options = {
-			data: [{ "name": "精选", "url": "choice()", "icon": "icon/jingxuan.jpg" }, { "name": "捷径", "url": "https://broccoli.uc.cn/apps/iiryABZFS/routes/BBkPRMpHY?offline=true&uc_param_str=dnntnwvepffrgibijbprsvdsdichmenn&uc_biz_str=OPT:NIGHT_MODE_MASK@0|OPT:BACK_BTN_STYLE@0", "icon": "icon/jiejing.jpg" },{ "name": "夸克日报", "url": "https://news.quark.cn/dailynews/v2/home?entry=navi&webCompass=true&uc_param_str=dnfrpfbivessbtbmnilauputogpintnwmtsvcppcprsnnnchmicc&uc_biz_str=OPT%3ABACK_BTN_STYLE%400%7Cqk_enable_gesture%3Afalse%7COPT%3ATOOLBAR_STYLE%400%7COPT%3AW_PAGE_REFRESH%400%7COPT%3Aqk_long_clk%400%7COPT%3AW_ENTER_ANI%401%7COPT%3AW_EXIT_ANI%401%7COPT%3AIMMERSIVE%401", "icon": "icon/ribao.jpg" },{ "name": "热搜", "url": "https://broccoli.uc.cn/apps/quark_hot_search/routes/index?uc_param_str=dsdnfrpfbivesscpgimibtbmnijblauputogpintnwktprchmt&uc_biz_str=OPT%3AW_ENTER_ANI%401%7COPT%3ATOOLBAR_STYLE%400%7COPT%3AW_PAGE_REFRESH%400%7COPT%3ABACK_BTN_STYLE%400%7COPT%3ASAREA%400%7COPT%3AIMMERSIVE%401&webCompass=true&entryrtne=quark_sc&tabidx=0", "icon": "icon/quark.jpg" },{ "name": "微博", "url": "https://weibo.com", "icon": "icon/weibo.png" }, { "name": "知乎", "url": "https://wjrsbu.smartapps.cn/pages/index/index", "icon": "icon/zhihu.png" },{ "name": "IT之家", "url": "https://m.ithome.com", "icon": "icon/ithome.png" }, { "name": "搜狐", "url": "https://2ly4hg.smartapps.cn/pages/index/index?_swebfr=1&_swebFromHost=mibrowser", "icon": "icon/sohu.png" }, { "name": "热榜", "url": "https://www.jsrank.cn/", "icon": "icon/tophub.png" }, { "name": "导航", "url": "https://www.pp93.com/m", "icon": "icon/pp93.png" }],
+			data: [{ "name": "精选", "url": "choice()", "icon": "icon/jingxuan.jpg" }, 
+				   { "name": "捷径", "url": "https://broccoli.uc.cn/apps/iiryABZFS/routes/BBkPRMpHY?offline=true&uc_param_str=dnntnwvepffrgibijbprsvdsdichmenn&uc_biz_str=OPT:NIGHT_MODE_MASK@0|OPT:BACK_BTN_STYLE@0", "icon": "icon/jiejing.jpg" },
+				   { "name": "夸克日报", "url": "https://news.quark.cn/dailynews/v2/home?entry=navi&webCompass=true&uc_param_str=dnfrpfbivessbtbmnilauputogpintnwmtsvcppcprsnnnchmicc&uc_biz_str=OPT%3ABACK_BTN_STYLE%400%7Cqk_enable_gesture%3Afalse%7COPT%3ATOOLBAR_STYLE%400%7COPT%3AW_PAGE_REFRESH%400%7COPT%3Aqk_long_clk%400%7COPT%3AW_ENTER_ANI%401%7COPT%3AW_EXIT_ANI%401%7COPT%3AIMMERSIVE%401", "icon": "icon/ribao.jpg" },
+				   { "name": "热搜", "url": "https://broccoli.uc.cn/apps/quark_hot_search/routes/index?uc_param_str=dsdnfrpfbivesscpgimibtbmnijblauputogpintnwktprchmt&uc_biz_str=OPT%3AW_ENTER_ANI%401%7COPT%3ATOOLBAR_STYLE%400%7COPT%3AW_PAGE_REFRESH%400%7COPT%3ABACK_BTN_STYLE%400%7COPT%3ASAREA%400%7COPT%3AIMMERSIVE%401&webCompass=true&entryrtne=quark_sc&tabidx=0", "icon": "icon/quark.jpg" },
+				   { "name": "微博", "url": "https://weibo.com", "icon": "icon/weibo.png" }, 
+				   { "name": "知乎", "url": "https://zhihu.com", "icon": "icon/zhihu.png" },
+				   { "name": "IT之家", "url": "https://m.ithome.com", "icon": "icon/ithome.png" }, 
+				   { "name": "联合早报", "url": "https://www.zaobao.com", "icon": "icon/lianhezaobao.png" }, 
+				   { "name": "财联社", "url": "https://www.cls.cn/", "icon": "icon/cailianshe.png" }, 
+				   { "name": "金十数据", "url": "https://www.jin10.com/", "icon": "icon/jinshishuju.png" }],
 		};
 		this.options = $.extend({}, this.options, options);
 		this.init();
@@ -992,7 +1002,23 @@ require(['jquery'], function ($) {
 			location.href = "x:bm?sort=default";
 		}
 	}).longPress(() => {
-		var data = [{ "title": "搜索引擎", "type": "select", "value": "engines", "data": [{ "t": "夸克搜索", "v": "quark" }, { "t": "跟随Via浏览器", "v": "via" }, { "t": "百度搜索", "v": "baidu" }, { "t": "谷歌搜索", "v": "google" }, { "t": "必应搜索", "v": "bing" }, { "t": "神马搜索", "v": "sm" }, { "t": "好搜搜索", "v": "haosou" }, { "t": "搜狗搜索", "v": "sogou" }, { "t": "自定义", "v": "diy" }] }, { "title": "设置壁纸", "value": "wallpaper" }, { "title": "设置LOGO", "value": "logo" }, { "title": "恢复默认壁纸和LOGO", "value": "delLogo" }, { "title": "图标颜色", "type": "select", "value": "bookcolor", "data": [{ "t": "深色图标", "v": "black" }, { "t": "浅色图标", "v": "white" }] }, { "title": "主页样式细圆", "type": "checkbox", "value": "styleThin" }, { "title": "夜间模式", "type": "checkbox", "value": "nightMode" }, { "title": "记录搜索历史", "type": "checkbox", "value": "searchHistory" }, { "type": "hr" }, { "title": "导出主页数据", "value": "export" }, { "title": "导入主页数据", "value": "import" }, { "type": "hr" }, { "title": "Github", "value": "openurl", "description": "https://github.com/liumingye/quarkHomePage" }, { "title": "关于", "description": "当前版本：" + app.version }];
+		var data = [{ "title": "搜索引擎", "type": "select", "value": "engines", "data": [{ "t": "夸克搜索", "v": "quark" }, 
+																					  { "t": "跟随Via浏览器", "v": "via" }, 
+																					  { "t": "百度搜索", "v": "baidu" }, 
+																					  { "t": "谷歌搜索", "v": "google" }, 
+																					  { "t": "必应搜索", "v": "bing" }, 
+																					  { "t": "神马搜索", "v": "sm" }, 
+																					  { "t": "好搜搜索", "v": "haosou" }, 
+																					  { "t": "搜狗搜索", "v": "sogou" }, 
+																					  { "t": "自定义", "v": "diy" }] }, 
+					{ "title": "设置壁纸", "value": "wallpaper" }, 
+					{ "title": "设置LOGO", "value": "logo" }, 
+					{ "title": "恢复默认壁纸和LOGO", "value": "delLogo" }, 
+					{ "title": "图标颜色", "type": "select", "value": "bookcolor", "data": [{ "t": "深色图标", "v": "black" }, { "t": "浅色图标", "v": "white" }] }, 
+					{ "title": "主页样式细圆", "type": "checkbox", "value": "styleThin" }, 
+					{ "title": "夜间模式", "type": "checkbox", "value": "nightMode" }, 
+					{ "title": "记录搜索历史", "type": "checkbox", "value": "searchHistory" }, 
+					{ "type": "hr" }, { "title": "导出主页数据", "value": "export" }, { "title": "导入主页数据", "value": "import" }, { "type": "hr" }, { "title": "Github", "value": "openurl", "description": "https://github.com/liumingye/quarkHomePage" }, { "title": "关于", "description": "当前版本：" + app.version }];
 		var html = '<div class="page-settings"><div class="set-header"><div class="set-back"></div><p class="set-logo">主页设置</p></div><ul class="set-option-from">';
 		for (var json of data) {
 			if (json.type === 'hr') {
